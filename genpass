@@ -1,0 +1,14 @@
+#!/usr/bin/env python
+
+import random
+import string
+import sys
+
+if __name__ == '__main__':
+    if len(sys.argv) > 1:
+        length = int(sys.argv[1])
+    else:
+        length = 32
+    letters = string.ascii_letters + string.punctuation + string.digits
+    passwd = "".join(random.choice(letters) for x in range(length))
+    print(passwd)
